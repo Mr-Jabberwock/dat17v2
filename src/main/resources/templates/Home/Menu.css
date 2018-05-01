@@ -1,0 +1,49 @@
+
+.menu {
+    overflow: hidden;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.menu a {
+
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+    background-color: transparent;
+    display: block;
+    color: White;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    float: left;
+
+
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.menu a.active {
+
+    color:  white;
+    background-color: rgb(185, 122, 87);
+}
+
+.footer {
+    font-family: 'Playfair Display', serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+}
