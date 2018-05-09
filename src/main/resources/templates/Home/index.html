@@ -8,13 +8,67 @@
 <body>
 <link rel="stylesheet" type = "text/css" href = "menu.css">
 
-<img src = "logo.png" width = "10%"  class = "logo">
 
-<div class = "menu">
-    <a href = "/index.html">HJEM</a>
-    <a href = "#info">OM OS</a>
-    <a href = "#kontakt">KONTAKT</a>
-    <a href = "#priser">PRISER</a>
+
+<style>
+#navbar {
+overflow: hidden;
+
+position: fixed;
+top: 40px;
+left: 260px;
+width: 90%;
+}
+
+
+#navbar a {
+
+font-family: 'Playfair Display', serif;
+font-size: 16px;
+font-style: normal;
+font-variant: normal;
+font-weight: 500;
+line-height: 26.4px;
+background-color: transparent;
+display: block;
+color: black;
+padding: 14px 60px;
+text-decoration: none;
+text-align: center;
+float: left;
+
+
+}
+.content {
+    padding: 16px;
+}
+
+.navbackground {
+    position: fixed;
+    top: 0;
+    left: -5px;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    z-index: 10;
+
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+#navbar a:hover {
+color: lawngreen;
+}
+</style>
+<div class = "navbackground">
+    <img src = "logo.png" width = "10%"  class = "logo">
+<div id = "navbar">
+    <a href="#">HJEM</a>
+    <a href="#info">OM OS</a>
+    <a href="#kontakt">KONTAKT</a>
+    <a href="javascript:void(0)">PRISER</a>
+</div>
 </div>
 <img src="vantheman.jpg" height="80%" width="80%"  >
 <div class = "black"></div>
@@ -44,6 +98,14 @@
 
     }
 
+    .newchapb{
+        position: relative;
+        top: 260px;
+        left: 64px;
+        font-family: 'Comfortaa', cursive;
+        font-size: 40px;
+    }
+
     .newchap2{
         background-color: #b176a3;
         color: white;
@@ -61,14 +123,14 @@
 
     h1a{
         font-family: 'Indie Flower', cursive;
-        font-size: 35px;
+        font-size: 30px;
         position: relative;
         top: 170px;
         left: 25%;
     }
     h1b{
         font-family: 'Indie Flower', cursive;
-        font-size: 35px;
+        font-size: 30px;
         position: relative;
         top: 190px;
         left: 30%;
@@ -90,14 +152,16 @@
     }
 
     .logo{
-        position: absolute;
-        top: 0px;
+        position: relative;
+        top: 40px;
+        left: 100px;
+        z-index: 11;
     }
 
     .airport{
         position: relative;
-        top: -650px;
-        left: 60px;
+        top: -450px;
+        left: 80px;
         z-index: -2;
         opacity: 0.4;
         width: 70%;
@@ -115,14 +179,15 @@
 
 <h1a>"To be or not to be"</h1a>
 <h1b>-Morten</h1b>
-<div class = newchap id="info">
+<div class = "newchap" id="info">
     om os
 </div>
-
+<img src="airport2.png" class = "airport">
 <div class = newchap2 id="kontakt">
     kon
     takt
 </div>
+
 <img src="mail.png" class = "mail">
 
 

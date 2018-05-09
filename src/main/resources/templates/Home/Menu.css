@@ -1,50 +1,33 @@
 
-.menu {
-    overflow: hidden;
 
-    position: absolute;
-    top: 40px;
-    left: 250px;
-    width: 90%;
-}
-
-.menu a {
-
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    line-height: 26.4px;
-    background-color: transparent;
-    display: block;
-    color: black;
-    padding: 14px 60px;
-    text-decoration: none;
-    text-align: center;
-    float: left;
-
-
-}
-
-.menu a:hover {
-    color: lawngreen;
-}
-
-.menu a.active {
+.nav a.active {
 
     color:  black;
 
 
 }
 
+
+
 .footer {
     font-family: 'Playfair Display', serif;
+    font-size: 14px;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: rgb(0 0 0);
-    color: white;
+    background-color: white;
+    color: black;
     text-align: center;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
 }
