@@ -39,6 +39,7 @@
         background-color: lightblue;
         width: 100%;
         height: auto;
+        z-index: -20;
     }
 
     .priser{
@@ -139,11 +140,7 @@
         z-index: 1;
     }
 
-    .mail{
-        position: relative;
-        top: -400px;
-        left: 925px;
-    }
+
     form{
         position: relative;
         top: 0;
@@ -186,6 +183,15 @@ float: left;
     z-index: 10;
 
 }
+.mail{
+
+    z-index: 1;
+    opacity: 0.5;
+
+    margin-bottom: 200px;
+    margin-right: 50px;
+;
+}
 
 #navbar {
     overflow: hidden;
@@ -202,6 +208,17 @@ float: left;
 #navbar a:hover {
 color: lawngreen;
 }
+    .kontaktform{
+      position: relative;
+        bottom: 650px;
+        left: 70px;
+        table-layout: fixed;
+        width: 50%;
+    }
+
+
+
+
 </style>
 
 <div class = "navbackground">
@@ -231,17 +248,64 @@ color: lawngreen;
     <img src = "airport.png" id = "priser">
 </div>
     <div class = "kontakt" id = "kontakt">
+        <img src = "mail_baggrund.png" class = "mail" width = "800" height="800">
+<table class = "kontaktform">
 
-        <form action = "\kontakt" action = "post">
+    <td>
+
+
+
+        <form action = "\kontakt" action = "post" id = "kontakt">
+
+            <table>
+
+                <tr>
+                    <th>Fornavn:</th>
+                    <th>Efternavn: </th>
+                </tr>
+
             <tr>
-                <td>Fornavn: <input type = "text" name = "firstname" autofocus required></td>
-                <td>Efternavn: <input type = "text" name = "surname" autofocus required></td></td>
+                <td><input type = "text" name = "firstname" autofocus required></td>
+                <td><input type = "text" name = "surname" autofocus required></td>
 
             </tr>
+                <tr>
+                    <th>Tlf: </th>
+                    <th>Email: </th>
+                </tr>
+            <tr>
+                <td><input type = "tel" name = "tlf" required></td>
+                <td><input type = "email" name = "email" required> </td>
+            </tr>
+                <tr>
+                    <th>Emne</th>
+                </tr>
+            <tr>
+              <td>  <select name = "emne">
+                    <option value= "1">Priser</option>
+                    <option value="2">Andet</option>
+            </select></td>
+            </tr>
+                <tr>
+                    <th>Besked: </th>
+                </tr>
+            </table>
+
+
+            <textarea form="kontakt" rows = "4" cols = "50"></textarea>
 
         </form>
-    </div>
 
+
+    </td>
+
+    <td>
+
+        bla bla bla
+    </td>
+
+
+</table>
 
 
 
