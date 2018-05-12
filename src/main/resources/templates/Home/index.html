@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content = "width = device-width, initial-scale = 1.0">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Indie+Flower" rel="stylesheet">
@@ -8,25 +9,50 @@
 <body>
 <link rel="stylesheet" type = "text/css" href = "menu.css">
 
-<img src = "logo.png" width = "10%"  class = "logo">
 
-<div class = "menu">
-    <a href = "/index.html">HJEM</a>
-    <a href = "#info">OM OS</a>
-    <a href = "#kontakt">KONTAKT</a>
-    <a href = "#priser">PRISER</a>
-</div>
-<img src="vantheman.jpg" height="80%" width="80%"  >
-<div class = "black"></div>
+
 
 <style>
+
+
+    .fullpage{
+        width: 100%;
+        height: 4320px;
+        z-index: -2;
+    }
+
+    .omos{
+        position: relative;
+        top: 270px;
+        background-color: lightgray;
+        width: 100%;
+        height: auto
+
+    }
+.forside{
+
+    width: 100%;
+    height: auto;
+    z-index: -10;
+}
+    .kontakt{
+        background-color: lightblue;
+        width: 100%;
+        height: auto;
+    }
+
+    .priser{
+        background-color: lightslategrey;
+        width:100%;
+        height: auto;
+    }
 
     img {
         display: block;
         position: relative;
-      z-index: -1;
+        z-index: -1;
         top: 130px;
-        left: 60px;
+        margin: auto;
     }
 
     .newchap{
@@ -42,6 +68,14 @@
         font-family: 'Comfortaa', cursive;
         font-size: 40px;
 
+    }
+
+    .newchapb{
+        position: relative;
+        top: 260px;
+        left: 64px;
+        font-family: 'Comfortaa', cursive;
+        font-size: 40px;
     }
 
     .newchap2{
@@ -61,14 +95,14 @@
 
     h1a{
         font-family: 'Indie Flower', cursive;
-        font-size: 35px;
+        font-size: 30px;
         position: relative;
         top: 170px;
         left: 25%;
     }
     h1b{
         font-family: 'Indie Flower', cursive;
-        font-size: 35px;
+        font-size: 30px;
         position: relative;
         top: 190px;
         left: 30%;
@@ -90,17 +124,19 @@
     }
 
     .logo{
-        position: absolute;
-        top: 0px;
+        position: relative;
+        top: 40px;
+        left: -500px;
+        z-index: 11;
     }
 
     .airport{
         position: relative;
-        top: -650px;
-        left: 60px;
-        z-index: -2;
-        opacity: 0.4;
+        top: 0;
+        opacity: 0.8;
         width: 70%;
+        height: auto;
+        z-index: 1;
     }
 
     .mail{
@@ -108,26 +144,108 @@
         top: -400px;
         left: 925px;
     }
+    form{
+        position: relative;
+        top: 0;
+    }
 
 
 
+
+
+
+#navbar a {
+
+font-family: 'Playfair Display', serif;
+font-size: 16px;
+font-style: normal;
+font-variant: normal;
+font-weight: 500;
+line-height: 26.4px;
+background-color: transparent;
+display: block;
+color: black;
+padding: 14px 60px;
+text-decoration: none;
+text-align: center;
+float: left;
+
+
+}
+.content {
+    padding: 16px;
+}
+
+.navbackground {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    z-index: 10;
+
+}
+
+#navbar {
+    overflow: hidden;
+
+    position: fixed;
+    top: 40px;
+   left: 350px;
+    width: 90%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+#navbar a:hover {
+color: lawngreen;
+}
 </style>
+
+<div class = "navbackground">
+    <img src = "logo.png" width = "10%"  class = "logo">
+<div id = "navbar">
+
+    <a href="#">HJEM</a>
+    <a href="#info">OM OS</a>
+    <a href="#priser">PRISER</a>
+    <a href="#kontakt">KONTAKT</a>
+
+</div>
+</div>
+    <div class = "forside">
+<img src="vantheman.jpg" height="80%" width="80%"  >
+
+
 
 <h1a>"To be or not to be"</h1a>
 <h1b>-Morten</h1b>
-<div class = newchap id="info">
-    om os
+    </div>
+<div class = "omos" id = "info" height ="1920" width = "1080">
+    <img src="airport2.png" class = "airport" >
 </div>
 
-<div class = newchap2 id="kontakt">
-    kon
-    takt
+<div class = "priser">
+    <img src = "airport.png" id = "priser">
 </div>
-<img src="mail.png" class = "mail">
+    <div class = "kontakt" id = "kontakt">
+
+        <form action = "\kontakt" action = "post">
+            <tr>
+                <td>Fornavn: <input type = "text" name = "firstname" autofocus required></td>
+                <td>Efternavn: <input type = "text" name = "surname" autofocus required></td></td>
+
+            </tr>
+
+        </form>
+    </div>
 
 
 
 
+</div>
 
 </body>
 </html>
