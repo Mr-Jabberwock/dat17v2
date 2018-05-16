@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta name="viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta charset = "utf-8">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Indie+Flower" rel="stylesheet">
+
 </head>
 <body>
 <link rel="stylesheet" type = "text/css" href = "menu.css">
@@ -13,6 +15,12 @@
 
 
 <style>
+
+    .headline{
+        font-family: 'Comfortaa', cursive;
+        color: lightblue;
+        font-size: 40px;
+    }
 
 
     .fullpage{
@@ -24,7 +32,7 @@
     .omos{
         position: relative;
         top: 270px;
-        background-color: lightgray;
+        background-color: white;
         width: 100%;
         height: auto
 
@@ -133,11 +141,12 @@
 
     .airport{
         position: relative;
-        top: 0;
-        opacity: 0.8;
+        top: -500px;
+        left: -200px;
+        opacity: 0.5;
         width: 70%;
         height: auto;
-        z-index: 1;
+        z-index: 0;
     }
 
 
@@ -212,11 +221,29 @@ color: lawngreen;
       position: relative;
         bottom: 650px;
         left: 70px;
-        table-layout: fixed;
-        width: 50%;
+        z-index: 20;
     }
 
+    .info{
+        position: relative;
+        left: 200px;
+    }
 
+.omostext{
+    position: relative;
+    top: 100px;
+    left: 600px;
+    font-family: 'Playfair Display', serif;
+}
+
+    .bar{
+        width: 100%;
+        height: 100px;
+        background-color: lightslategrey;
+        position: relative;
+        top: 100px;
+        z-index: 5;
+    }
 
 
 </style>
@@ -241,72 +268,80 @@ color: lawngreen;
 <h1b>-Morten</h1b>
     </div>
 <div class = "omos" id = "info" height ="1920" width = "1080">
-    <img src="airport2.png" class = "airport" >
+
+    <div class = "bar"><div class = headline >om os</div></div>
+
+
+    <textarea style="color: black; background-color: transparent; border: none; height: 500px; width: 500px; z-index: 2"  readonly class = "omostext">Lorem ipsum dolor sit amet, magna meliore hendrerit ut pri, ut falli eirmod posidonium eos. Dico tantas tacimates eos id, aeque noster sit et, eam ut rebum denique definiebas. Bonorum apeirian nominati ei nec. Suas accusam et has. Ut vim viris audiam, maiestatis expetendis ad nec.
+
+An eros officiis sea. Dolore epicurei sea ei. No quodsi volumus sea, id pro verear ocurreret. Eam malorum persecuti ea, eu forensibus definitiones eam, ex per mundi aliquip bonorum. Ei utamur omnesque mei, cum et nibh zril accusamus, an justo animal albucius eos.
+
+Habemus epicurei efficiendi has cu. Vel id justo deseruisse, brute ullamcorper eu pri, sea viris impetus ad. Dicit adolescens est in. Fabellas constituam cum at. Ad vix quem impetus mentitum. Mel aperiri torquatos eu.
+
+Usu et dicta aperiam debitis. Habeo veniam inermis sed ad, nostro aliquip eruditi per id. Ius cu nibh prima nostrum, eruditi legimus quo in. Dicat viris pri cu, ad malorum torquatos vix. Usu at dico meis vocent, eum oporteat patrioque omittantur id, vitae eruditi ius at. At pri etiam harum aliquip, quo verear constituto ex.
+
+Commodo viderer vocibus his no. Pro ut iusto offendit. Tantas deleniti quo ne, nam eu semper audire copiosae. Explicari torquatos sed no. Postea corpora quo an, vel primis possim commodo ea, id pri ludus prompta.</textarea>
+  <img src="airport2.png" class = "airport" >
 </div>
 
-<div class = "priser">
-    <img src = "airport.png" id = "priser">
+<div class = "priser" id = "priser">
+
 </div>
-    <div class = "kontakt" id = "kontakt">
-        <img src = "mail_baggrund.png" class = "mail" width = "800" height="800">
-<table class = "kontaktform">
-
-    <td>
+<div class = "kontakt" id = "kontakt">
 
 
 
-        <form action = "\kontakt" action = "post" id = "kontakt">
+        <img src = "mail_baggrund.png" class = "mail">
 
-            <table>
+                    <form action = "\kontakt" action = "post" id = "kontakt">
 
-                <tr>
-                    <th>Fornavn:</th>
-                    <th>Efternavn: </th>
-                </tr>
+                        <table class = "kontaktform">
 
-            <tr>
-                <td><input type = "text" name = "firstname" autofocus required></td>
-                <td><input type = "text" name = "surname" autofocus required></td>
+                            <tr>
+                                <th>Fornavn:</th>
+                                <th>Efternavn: </th>
+                            </tr>
 
-            </tr>
-                <tr>
-                    <th>Tlf: </th>
-                    <th>Email: </th>
-                </tr>
-            <tr>
-                <td><input type = "tel" name = "tlf" required></td>
-                <td><input type = "email" name = "email" required> </td>
-            </tr>
-                <tr>
-                    <th>Emne</th>
-                </tr>
-            <tr>
-              <td>  <select name = "emne">
-                    <option value= "1">Priser</option>
-                    <option value="2">Andet</option>
-            </select></td>
-            </tr>
-                <tr>
-                    <th>Besked: </th>
-                </tr>
-            </table>
+                            <tr>
+                                <td><input type = "text" name = "firstname" autofocus required></td>
+                                <td><input type = "text" name = "surname" autofocus required></td>
 
-
-            <textarea form="kontakt" rows = "4" cols = "50"></textarea>
-
-        </form>
+                            </tr>
+                            <tr>
+                                <th>Tlf: </th>
+                                <th>Email: </th>
+                            </tr>
+                            <tr>
+                                <td><input type = "tel" name = "tlf" required></td>
+                                <td><input type = "email" name = "email" required> </td>
+                            </tr>
+                            <tr>
+                                <th>Emne</th>
+                            </tr>
+                            <tr>
+                                <td>  <select name = "emne">
+                                    <option value= "1">Priser</option>
+                                    <option value="2">Andet</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+                                <th>Besked: </th>
+                            </tr>
+                        </table>
 
 
-    </td>
+                        <textarea form="kontakt" rows = "4" cols = "50"></textarea>
 
-    <td>
+                    </form>
 
-        bla bla bla
-    </td>
-
-
-</table>
-
+       <table class = "info">
+                        <tr>
+                            SWHTRansport
+                        </tr>
+                        <tr>Rentemestervej 10</tr>
+                        <tr>  Tlf: 12345678</tr>
+                        <tr> Mail: hej@mail.com</tr>
+                    </table>
 
 
 </div>
